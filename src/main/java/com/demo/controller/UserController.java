@@ -26,5 +26,11 @@ public class UserController {
         return Response.success(userService.addUser(user));
     }
 
+    @RequestMapping(value = "/addAndSelect",method = RequestMethod.POST)
+    @ResponseBody
+    public Response addAndSelect(@RequestBody User user )  {
+        return Response.success(userService.addAndSelect(user));
+    }
+
 
 }

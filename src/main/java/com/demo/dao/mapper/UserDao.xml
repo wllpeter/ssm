@@ -12,4 +12,9 @@
         insert into userinfo (name,sex,age)
         value (#{name},#{sex},#{age})
     </insert>
+
+    <select id="selectAllUser">
+        select sex,id,NAME,grade
+        from userinfo
+    </select>
 </mapper>
