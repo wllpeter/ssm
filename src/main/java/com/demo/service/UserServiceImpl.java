@@ -17,4 +17,9 @@ public class UserServiceImpl implements UserService{
     public User selectUser(long userId) {
         return userDao.selectUser(userId);
     }
+
+    @Override
+    public Boolean addUser(User user) {
+        return userDao.addUser(user)>0;
+    }
 }

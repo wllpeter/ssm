@@ -8,4 +8,8 @@
         SELECT sex,id,NAME FROM userinfo WHERE id = #{id}
     </select>
 
+    <insert id="addUser" parameterType="com.demo.pojo.User">
+        insert into userinfo (name,sex,age)
+        value (#{name},#{sex},#{age})
+    </insert>
 </mapper>
